@@ -1,18 +1,17 @@
-name : Run python program 
+name: Run python program
+
 on:
-    push :
-        branches :
-            -main 
+  push:
+    branches:
+      - main
 
-jobs :
-    ci-pipeline:
-        runs-on: ubuntu-latest
-        steps :
+jobs:
+  ci-pipeline:
+    runs-on: ubuntu-latest
 
-             - name : checkout code 
-              uses : actions/checkout@v2
-              
-            - name : print welcome message 
-              run : echo 'welcome to github actions'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-           
+      - name: Print welcome message
+        run: echo "Welcome to GitHub Actions"
